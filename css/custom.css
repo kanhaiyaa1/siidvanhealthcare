@@ -53,11 +53,11 @@
 /************************************/
 
 :root{
-	--primary-color				: #08363B;
+	--primary-color				: #3069cb;
 	--secondary-color			: #EDF9FC;
 	--bg-color					: #FFFFFF;
 	--text-color				: #67787A;
-	--accent-color				: #00A8BC;
+	--accent-color				: #26c613;
 	--white-color				: #FFFFFF;
 	--divider-color				: #08363B1A;
 	--dark-divider-color		: #FFFFFF1A;
@@ -127,6 +127,9 @@ figure{
 
 img{
 	max-width: 100%;
+}
+.navbar-brand img{
+	max-width: 45%;
 }
 
 a{
@@ -558,7 +561,7 @@ header.main-header .header-sticky.active{
 
 .navbar{
 	align-items: center;
-	padding: 30px 0;
+	padding: 10px 0;
 }
 
 .navbar-brand{
@@ -1015,12 +1018,13 @@ header.main-header .header-sticky.active{
 }
 
 .about-us-item h3::before{
-	content: '\f058';
+	content: '';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--accent-color);
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
 }
@@ -2242,12 +2246,13 @@ header.main-header .header-sticky.active{
 }
 
 .pricing-item-list ul li::before{
-	content: '\f058';
+	content: '';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--accent-color);
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
 }
@@ -2709,20 +2714,23 @@ header.main-header .header-sticky.active{
 
 .faq-accordion .accordion-item .accordion-button::after,
 .faq-accordion .accordion-item .accordion-button.collapsed::after{
-    content: '\2b';
-    font-family: 'Font Awesome 7 Free';
+    content: '';
     position: absolute;
     top: 50%;
     right: 24px;
+    width: 20px;
+    height: 20px;
     transform: translateY(-50%);
-    font-size: 20px;
-    font-weight: 600;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--primary-color);
     transition: all 0.3s ease-in-out;
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after{
-    content: '\f068';
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>');
 	color: var(--white-color);
 }
 
@@ -3026,7 +3034,23 @@ header.main-header .header-sticky.active{
 
 .footer-copyright-text p{
 	color: var(--white-color);
+	margin-bottom: 8px;
+	line-height: 1.6em;
+}
+
+.footer-copyright-text p:last-child{
 	margin-bottom: 0;
+}
+
+.footer-copyright-text p a{
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-copyright-text p a:hover{
+	color: var(--white-color);
+	text-decoration: underline;
 }
 
 /************************************/
@@ -3252,12 +3276,13 @@ header.main-header .header-sticky.active{
 }
 
 .what-we-content-list ul li::before{
-	content: '\f058';
+	content: '';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--accent-color);
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
 }
@@ -3787,14 +3812,15 @@ header.main-header .header-sticky.active{
 }
 
 .service-entry ul li::before{
-    content: '\f058';
+    content: '';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--accent-color);
 }
 
 .service-entry ul li a{
@@ -4368,9 +4394,13 @@ header.main-header .header-sticky.active{
 }
 
 .case-study-entry ul li::before{
-    content: '\f058';
+    content: '';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     font-size: 18px;
     font-weight: 900;
 	color: var(--accent-color);
@@ -4703,9 +4733,13 @@ header.main-header .header-sticky.active{
 }
 
 .member-about-item h3::before{
-	content: '\f058';
+	content: '';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     font-size: 18px;
     font-weight: 900;
     color: var(--accent-color);
@@ -8187,9 +8221,13 @@ header.main-header .header-sticky.active{
 }
 
 .pricing-item-content-prime ul li::before{
-	content: '\f058';
-    font-family: 'Font Awesome 7 Free';
+	content: '';
     position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2326c613"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
     font-size: 18px;
     font-weight: 900;
     color: var(--accent-color);
@@ -8851,7 +8889,23 @@ header.main-header .header-sticky.active{
 
 .footer-copyright-text-prime p{
 	color: var(--white-color);
+	margin-bottom: 8px;
+	line-height: 1.6em;
+}
+
+.footer-copyright-text-prime p:last-child{
 	margin-bottom: 0;
+}
+
+.footer-copyright-text-prime p a{
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-copyright-text-prime p a:hover{
+	color: var(--white-color);
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 1024px){
@@ -9723,7 +9777,6 @@ header.main-header .header-sticky.active{
 .hero-list-royal ul li::before{
 	content: '\f058';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
     font-size: 18px;
     font-weight: 900;
     color: var(--accent-color);
@@ -10533,7 +10586,6 @@ header.main-header .header-sticky.active{
 .pricing-item-list-royal ul li::before{
 	content: '\f058';
     position: absolute;
-    font-family: 'Font Awesome 7 Free';
     font-size: 18px;
     font-weight: 900;
     color: var(--accent-color);
@@ -11101,7 +11153,23 @@ header.main-header .header-sticky.active{
 
 .footer-copyright-text-royal p{
 	color: var(--white-color);
+	margin-bottom: 8px;
+	line-height: 1.6em;
+}
+
+.footer-copyright-text-royal p:last-child{
 	margin-bottom: 0;
+}
+
+.footer-copyright-text-royal p a{
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-copyright-text-royal p a:hover{
+	color: var(--white-color);
+	text-decoration: underline;
 }
 
 .footer-social-links-royal ul{
