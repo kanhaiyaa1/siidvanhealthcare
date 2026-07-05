@@ -364,17 +364,24 @@
 	});
 
 	function submitappointmentForm(){
-		/* Ajax call to submit form */
+		/* Ajax call to submit form to Formspree */
 		$.ajax({
 			type: "POST",
-			url: "form-appointment.php",
+			url: $appointmentForm.attr("action"),
 			data: $appointmentForm.serialize(),
-			success : function(text){
-				if (text === "success"){
-					appointmentformSuccess();
-				} else {
-					appointmentsubmitMSG(false,text);
+			dataType: "json",
+			headers: {
+				"Accept": "application/json"
+			},
+			success : function(response){
+				appointmentformSuccess();
+			},
+			error: function(xhr){
+				var msg = "Oops! Something went wrong. Please try again.";
+				if (xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.length){
+					msg = xhr.responseJSON.errors.map(function(e){ return e.message; }).join(", ");
 				}
+				appointmentsubmitMSG(false, msg);
 			}
 		});
 	}

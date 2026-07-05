@@ -3028,8 +3028,7 @@ header.main-header .header-sticky.active{
 .footer-copyright{
 	text-align: center;
 	border-top: 1px solid var(--dark-divider-color);
-	margin-top: 100px;
-	padding: 60px 0;
+	
 }
 
 .footer-copyright-text p{
@@ -3059,7 +3058,7 @@ header.main-header .header-sticky.active{
 
 .page-header{
 	position: relative;
-	background-image: url('../images/page-header-bg.jpg');
+	background-image: url('../images/breadcrumb-bg.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -10293,20 +10292,23 @@ header.main-header .header-sticky.active{
 	height: 100%;
 }
 
-.our-expertise-image-royal figure{
+.our-expertise-image-royal figure,
+.our-expertise-image-royal video{
 	position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.our-expertise-image-royal figure img{
+.our-expertise-image-royal figure img,
+.our-expertise-image-royal video{
 	width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.our-expertise-image-royal figure::before{
+.our-expertise-image-royal figure::before,
+.our-expertise-image-royal::after{
 	content: ' ';
 	position: absolute;
 	top: 0;
@@ -10319,15 +10321,18 @@ header.main-header .header-sticky.active{
 	height: 100%;
 }
 
-.our-expertise-body-royal{
-	position: relative;
-	max-width: 635px;
-	background: var(--white-color);
-	border-radius: 30px;
-	padding: 40px;
-	margin-left: auto;
-	overflow: hidden;
-	z-index: 2;
+.our-expertise-body-royal {
+    position: relative;
+    max-width: 792px;
+    background: rgba(255, 255, 255, 0.85); /* 85% white, 15% transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    padding: 40px;
+    margin-left: auto;
+    overflow: hidden;
+    z-index: 2;
 }
 
 .expertise-item-royal{
@@ -10828,7 +10833,7 @@ header.main-header .header-sticky.active{
 
 .our-faq-royal{
 	position: relative;
-	background: url("../images/faqs-bg-image-royal.jpg");
+	background: url("../images/our-expertise-image-royal.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -11270,11 +11275,13 @@ header.main-header .header-sticky.active{
 	}
 
 	.our-expertise-image-royal figure,
-	.our-expertise-image-royal figure img{
+	.our-expertise-image-royal figure img,
+	.our-expertise-image-royal video{
 		height: auto;
 	}
 
-	.our-expertise-image-royal figure::before{
+	.our-expertise-image-royal figure::before,
+	.our-expertise-image-royal::after{
 		display: none;
 	}
 
@@ -11933,3 +11940,103 @@ header.main-header .header-sticky.active{
 	}
 }
 
+
+/* Minimal homepage footer */
+.footer-minimal-row{
+	row-gap: 40px;
+}
+
+.footer-col-about .footer-logo img{
+	width: 100%;
+	max-width: 144px;
+	margin-bottom: 20px;
+}
+
+.footer-about-text{
+	color: var(--white-color);
+	opacity: 0.75;
+	line-height: 1.7em;
+	margin-bottom: 20px;
+}
+
+.footer-contact-list{
+	list-style: none;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+.footer-contact-list li{
+	color: var(--white-color);
+	opacity: 0.85;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.footer-contact-list li:last-child{
+	margin-bottom: 0;
+}
+
+.footer-contact-list li i{
+	color: var(--accent-color);
+	margin-top: 4px;
+	flex-shrink: 0;
+}
+
+.footer-contact-list li a{
+	color: inherit;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-contact-list li a:hover{
+	color: var(--accent-color);
+}
+
+.footer-col-links .footer-links{
+	max-width: none;
+}
+
+.footer-col-about .footer-social-links{
+	margin-top: 10px;
+}
+
+.footer-col-about .footer-social-links ul li a{
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+}
+
+.footer-col-about .footer-social-links ul li i{
+	color: var(--white-color);
+	font-size: 18px;
+}
+
+.footer-col-about .footer-social-links ul li:hover a{
+	background: var(--white-color);
+	border-color: var(--white-color);
+}
+
+.footer-col-about .footer-social-links ul li:hover i{
+	color: var(--primary-color);
+}
+
+.footer-map{
+	border-radius: 12px;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.footer-map iframe{
+	display: block;
+	filter: grayscale(20%);
+}
+
+@media (max-width: 991px){
+	.footer-col-about,
+	.footer-col-links,
+	.footer-col-map{
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+}
