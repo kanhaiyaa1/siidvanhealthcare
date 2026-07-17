@@ -2989,6 +2989,12 @@ header.main-header .header-sticky.active{
 	color: var(--white-color);
 }
 
+.footer-social-links ul li svg{
+	width: 18px;
+	height: 18px;
+	fill: var(--white-color);
+}
+
 .footer-links{
     max-width: 30%;
 }
@@ -9871,7 +9877,7 @@ header.main-header .header-sticky.active{
 }
 
 .about-us-client-body-royal .satisfy-client-images{
-	width: calc(40% - 5px);
+	width: auto;
 }
 
 .about-us-client-content-royal{
@@ -12012,6 +12018,12 @@ header.main-header .header-sticky.active{
 	font-size: 18px;
 }
 
+.footer-col-about .footer-social-links ul li svg{
+	width: 18px;
+	height: 18px;
+	fill: var(--white-color);
+}
+
 .footer-col-about .footer-social-links ul li:hover a{
 	background: var(--white-color);
 	border-color: var(--white-color);
@@ -12019,6 +12031,10 @@ header.main-header .header-sticky.active{
 
 .footer-col-about .footer-social-links ul li:hover i{
 	color: var(--primary-color);
+}
+
+.footer-col-about .footer-social-links ul li:hover svg{
+	fill: var(--primary-color);
 }
 
 .footer-map{
@@ -12038,5 +12054,16 @@ header.main-header .header-sticky.active{
 	.footer-col-map{
 		max-width: 100%;
 		flex: 0 0 100%;
+	}
+}
+
+/* Founder message card responsiveness */
+@media (max-width: 767px){
+	.founder-message-card{
+		padding: 30px 20px !important;
+	}
+
+	.founder-message-card p{
+		font-size: 15px !important;
 	}
 }
