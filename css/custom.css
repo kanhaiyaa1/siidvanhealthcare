@@ -537,8 +537,9 @@ header.main-header{
 header.main-header .header-sticky{
 	position: relative;
 	top: 0;
-	background: transparent;
+	background: rgba(8, 21, 41, 0.55);
 	border-bottom: 1px solid var(--dark-divider-color);
+	border-radius: 20px;
 	z-index: 100;
 }
 
